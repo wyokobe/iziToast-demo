@@ -1,0 +1,52 @@
+<link rel="stylesheet" type="text/css" href="./css/iziToast.css" media="screen" />
+<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="./js/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="./js/iziToast.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".trigger-info").on('click', function(event) {
+      event.preventDefault();
+      // info
+      iziToast.info({
+        title: 'Infoカラー',
+        message: 'iziToast.info()',
+        position: 'bottomLeft',
+        transitionIn: 'bounceInRight',
+      });
+    });
+    $(".trigger-success").on('click', function(event) {
+      event.preventDefault();
+      // success
+      iziToast.success({
+        title: 'Successカラー',
+        message: 'iziToast.success()',
+        position: 'bottomRight',
+        transitionIn: 'bounceInLeft',
+      });
+    });
+    $(".trigger-warning").on('click', function(event) {
+      event.preventDefault();
+      // warning
+      iziToast.warning({
+        title: 'Warningカラー',
+        message: 'iziToast.warning()',
+        position: 'topLeft',
+        transitionIn: 'bounceInRight',
+      });
+    });
+    $(".trigger-error").on('click', function(event) {
+      event.preventDefault();
+      // error
+      iziToast.error({
+        title: 'Errorカラー',
+        message: 'iziToast.error()',
+        position: 'topRight',
+        transitionIn: 'bounceInLeft',
+      });
+    });
+  })
+</script>
+<button class="trigger-info">Info</button>
+<button class="trigger-success">Success</button>
+<button class="trigger-warning">Warning</button>
+<button class="trigger-error">Error</button>

@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="./css/iziToast.css" media="screen" />
+<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="./js/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="./js/iziToast.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".trigger").on('click', function(event) {
+      event.preventDefault();
+      iziToast.show({
+        title: 'Hey',
+        message: 'What would you like to add?',
+      });
+    });
+  })
+</script>
+<button class="trigger">show</button>
